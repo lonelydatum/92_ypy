@@ -1,0 +1,45 @@
+@import '../../../_common/styles/b300x250.scss';
+@import '../../../_common/styles/ypy.scss';
+
+#banner{
+	background-color: white;	
+}
+
+#banner, .frame{
+	// overflow: visible;
+
+}
+.f1{
+	// opacity: .3;
+}
+
+.hero{
+	transform-origin: 50% 50%;
+	// @include pos-scale(-80, -300, .5);
+	@include pos-scale(-150, -87, .615);
+	// @include pos-scale(-150, -125, .5);
+	
+	// @include pos-scale(-150, -125, .5);
+}
+
+.frame2{
+	// background-color: #bfff00;	
+}
+
+
+
+
+.frame1{
+	// opacity: 1;
+}
+
+.ring{	
+	
+	@include pos-scale-rotate(-366, -327, .38, 0);	
+}
+
+.ypy{
+	transform-origin: 50% 300px;
+	@include pos-scale-rotate(-150, -150, .5, 0);	
+}
+

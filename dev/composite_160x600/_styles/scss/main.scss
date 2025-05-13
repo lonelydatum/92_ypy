@@ -1,0 +1,44 @@
+@import '../../../_common/styles/b160x600.scss';
+@import '../../../_common/styles/ypy.scss';
+
+#banner{
+	background-color: white;
+	// margin: 66px;
+}
+
+#banner, .frame{
+	// overflow: visible;
+}
+.hero{
+	transform-origin: 50% 50%;
+	
+	@include pos-scale(-80, -300, .5);
+	
+}
+
+.frame2{
+	background-color: #bfff00;	
+}
+
+
+
+.footer-bar{
+	width: 160px;
+	height: 243px;
+	background-color: #4bfff4;
+	@include pos(0, 357);
+}
+
+.ring{
+	
+	@include pos-scale-rotate(-443, -147, .96, 22);
+	
+	
+}
+
+.ypy{
+	transform-origin: 80px 830px;
+	@include pos-scale-rotate(-40, -417, .5, 0);
+
+	
+}

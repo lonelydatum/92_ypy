@@ -1,0 +1,14 @@
+@import '../../../_common/styles/b160x600.scss';
+@import '../../../_common/styles/ypy.scss';
+
+#banner{
+	background-color: white;
+	background-color: #a56bff;
+}
+
+
+
+
+.devices{
+	@include pos-scale(0, 42, .5);
+}
