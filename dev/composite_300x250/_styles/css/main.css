@@ -210,19 +210,6 @@ canvas, .text, .frame, .outline, img {
   height: 250px;
 }
 
-#olg {
-  width: 108px;
-  height: 69px;
-  -webkit-transform: translate(0px, 193px);
-  -ms-transform: translate(0px, 193px);
-  transform: translate(0px, 193px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
 #legalBtn {
   -webkit-transform: translate(240px, 0px);
   -ms-transform: translate(240px, 0px);
@@ -235,25 +222,7 @@ canvas, .text, .frame, .outline, img {
   width: 60px;
 }
 
-.ypy-all {
-  -webkit-transform: translate(74px, 185px);
-  -ms-transform: translate(74px, 185px);
-  transform: translate(74px, 185px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy-all div {
-  overflow: hidden;
-  width: 30px;
-  height: 19px;
-  position: absolute;
-}
-
-.ypy_all_1 {
+.logo {
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
@@ -262,12 +231,25 @@ canvas, .text, .frame, .outline, img {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   position: absolute;
+  width: 82px;
+  bottom: -3px;
+  left: 0;
 }
 
-.ypy_all_2 {
-  -webkit-transform: translate(11px, 0px);
-  -ms-transform: translate(11px, 0px);
-  transform: translate(11px, 0px);
+.logo_bg, .logo_olg {
+  -webkit-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+}
+
+svg {
+  overflow: visible;
+}
+
+.device {
+  -webkit-transform: translate(204px, 111px) scale(0.5, 0.5);
+  -ms-transform: translate(204px, 111px) scale(0.5, 0.5);
+  transform: translate(204px, 111px) scale(0.5, 0.5);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -275,135 +257,9 @@ canvas, .text, .frame, .outline, img {
   position: absolute;
 }
 
-.ypy_all_3 {
-  -webkit-transform: translate(25px, 0px);
-  -ms-transform: translate(25px, 0px);
-  transform: translate(25px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy_all_4 {
-  -webkit-transform: translate(43px, 0px);
-  -ms-transform: translate(43px, 0px);
-  transform: translate(43px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy_all_5 {
-  -webkit-transform: translate(58px, 0px);
-  -ms-transform: translate(58px, 0px);
-  transform: translate(58px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy_all_6 {
-  -webkit-transform: translate(69px, 0px);
-  -ms-transform: translate(69px, 0px);
-  transform: translate(69px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy_all_7 {
-  -webkit-transform: translate(85px, 0px);
-  -ms-transform: translate(85px, 0px);
-  transform: translate(85px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy_all_8 {
-  -webkit-transform: translate(102px, 0px);
-  -ms-transform: translate(102px, 0px);
-  transform: translate(102px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy_all_9 {
-  -webkit-transform: translate(113px, 0px);
-  -ms-transform: translate(113px, 0px);
-  transform: translate(113px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy_all_10 {
-  -webkit-transform: translate(128px, 0px);
-  -ms-transform: translate(128px, 0px);
-  transform: translate(128px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-#banner {
-  background-color: white;
-}
-
-.hero {
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transform: translate(-150px, -87px) scale(0.615, 0.615);
-  -ms-transform: translate(-150px, -87px) scale(0.615, 0.615);
-  transform: translate(-150px, -87px) scale(0.615, 0.615);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ring {
-  -webkit-transform: translate(-366px, -327px) scale(0.38) rotate(0deg);
-  -ms-transform: translate(-366px, -327px) scale(0.38) rotate(0deg);
-  transform: translate(-366px, -327px) scale(0.38) rotate(0deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-.ypy {
-  -webkit-transform-origin: 50% 300px;
-  -ms-transform-origin: 50% 300px;
-  transform-origin: 50% 300px;
-  -webkit-transform: translate(-150px, -150px) scale(0.5) rotate(0deg);
-  -ms-transform: translate(-150px, -150px) scale(0.5) rotate(0deg);
-  transform: translate(-150px, -150px) scale(0.5) rotate(0deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
+.device {
+  -webkit-filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
+  filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
 }
 
 /*# sourceMappingURL=main.css.map */

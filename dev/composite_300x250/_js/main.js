@@ -1,12 +1,10 @@
-import { READ, startBasic} from '../../_common/js/ypy_arcade.js'
-import {bannerSize, init, olg_ypy, rotateScale1, rotateScale2} from '../../_common/js/common.js'
+import {bannerSize, init} from '../../_common/js/common.js'
 
-const ypy = [
-	
-	{x:-150, y:-122, scale:.485},
-	{x:-150, y:-125, scale:.5},
-
-]
+const ypy = new TimelineMax()
+ypy.from([".ypy_1", ".ypy_2", ".ypy_3"], {duration:.3, y:"-=200", stagger:.2})
 
 
-startBasic({ypy})
+const device = new TimelineMax()
+device.to(".device", {duration:.3, x:216, y:109, scale:.45}, "t2")
+
+init({ypy, device})

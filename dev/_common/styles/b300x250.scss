@@ -6,14 +6,7 @@
 }
 
 
-
-#olg{
-	width: 108px;
-	height: 69px;
-	@include pos(0, 193);
-}
-
-
+ 
 
 #legalBtn{	
 	@include pos(240, 0);	
@@ -21,8 +14,20 @@
 	// opacity: 1;
 }
 
+ 
+.logo{
+	// opacity: .5;
+	
+	@include pos(0, 0);
+	width: 82px;	
+	bottom:-3px;
+	left:0;
+}
 
+.logo_bg, .logo_olg{
+	transform-origin: 0% 100%;
+}
 
-.ypy-all{
-	@include pos(74, 185);
+svg{
+	overflow: visible;
 }
