@@ -33,16 +33,50 @@ const READ_ALL = {
 }
 
 const read = READ_ALL[universalBanner.name]
-console.log(read);
+console.log(read)
 
 
 const {w, h} = bannerSize
 
-function logoGO(logoNum){
+function logoGO(){
 	const tl = new TimelineMax()
-	tl.from([`.logo${logoNum} .logo_bg`, `.logo${logoNum} .logo_olg`], {duration:.7, stagger:.1, scale:0, ease:"back.out"})
+
+	tl.set(["#heart", "#leaf", "#number"], {opacity:0})
+	tl.set(["#fire", `#bg`, `#logo_olg`], {scale:0})
+
+
+	tl.to([`#bg`, `#logo_olg`], {duration:.7, stagger:.1, scale:1, ease:"back.out"})
+	
+	tl.to(`#number`, {duration:.3,  opacity:1}, "-=.25")
+
+	
+	
+
+	const PAUSE = .25
+
+	tl.set(`#zero`, { opacity:1})
+
+	tl.add("heart", `+=${PAUSE}`)
+	tl.to(`#zero`,  {duration:.1, opacity:0}, "heart")
+	tl.to(`#heart`,  {duration:.1, opacity:1}, "heart")
+
+	tl.add("fire", `+=${PAUSE}`)
+	tl.to(`#heart`,   {duration:.1, opacity:0}, "fire")
+	tl.to(`#fire`,  {duration:.5, scale:1, ease:"back.out"}, "fire")
+
+	tl.add("leaf", `+=${PAUSE}`)
+	tl.to(`#fire`, {duration:.1, scale:0}, "leaf")
+	tl.to(`#leaf`, {duration:.1, opacity:1}, "leaf")
+
+	tl.add("zero", `+=${PAUSE}`)
+	tl.to(`#leaf`, {duration:.1, opacity:0}, "zero")
+	tl.to(`#zero`, {duration:.1, opacity:1}, "zero")
+
+
 	return tl
 }
+
+ 
 
 function init({ypy, device}){	
 	const tl = new TimelineMax({onComplete:()=>{
@@ -51,12 +85,15 @@ function init({ypy, device}){
 		}
 	}})
 	
-	
+	 TweenLite.to(".hero_on", {duration:1.3, opacity:1, yoyo:true, repeat:11, repeatDelay:0, ease:"back.out"})
 
 	tl.set(".frame1", {opacity:1})
 
-	tl.add(logoGO(1))
+	
+	
 
+	
+	 
 
 	tl.add(ypy)
 	
@@ -66,7 +103,7 @@ function init({ypy, device}){
 	tl.from([".device"], {duration:.5, opacity:0}, "t1")
 	tl.to(".t1", {duration:.3, opacity:0}, `+=${read.t1}`)
 
-	TweenLite.to(".hero_off", {duration:.6, opacity:0, yoyo:true, repeat:11, repeatDelay:.3, ease:"bounce.out"})
+	
 
 
 	tl.add("t2")
@@ -78,7 +115,8 @@ function init({ypy, device}){
 	tl.from(".t2", {duration:.3, opacity:0}, "t2")
 	tl.to(".t2", {duration:.3, opacity:0}, `+=${read.t2}`)
 	
-	tl.to([ ".logo1", ".frame1"], {duration:.3, opacity:0} )
+
+	tl.to([  ".frame1"], {duration:.3, opacity:0} )
 
 
 	
@@ -89,8 +127,7 @@ function init({ypy, device}){
 	tl.from(".end_ypy", {duration:.3, opacity:0}, "+=.3")
 	tl.from(".end_cta", {duration:.3, opacity:0, y:"+=50", opacity:0}, "+=.3")
 
-
-	tl.add(logoGO(2))
+	tl.add(logoGO())
 	return tl
 }
 

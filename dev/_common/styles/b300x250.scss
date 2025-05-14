@@ -14,6 +14,9 @@
 	// opacity: 1;
 }
 
+.hero_on{
+	opacity: 0;
+}
  
 .logo{
 	// opacity: .5;
@@ -24,10 +27,28 @@
 	left:0;
 }
 
-.logo_bg, .logo_olg{
+svg#fire{
+	@include pos-scale(54, -17, 0);
+	width: 17px;	
+	bottom:-3px;
+	left:0;
+	
+}
+
+#leaf{
+	// @include pos-scale(0, 10, 1);
+	opacity: 0;
+}
+
+#heart{
+	// @include pos-scale(0, -10, 1);
+opacity: 0;
+}
+#bg, #logo_olg{
 	transform-origin: 0% 100%;
 }
 
 svg{
 	overflow: visible;
 }
+
