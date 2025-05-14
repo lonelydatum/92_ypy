@@ -93,7 +93,7 @@ function init(_ref) {
 	TweenLite.to(".phone", { duration: .8, opacity: .6, yoyo: true, repeat: 11, repeatDelay: 0, ease: "back.out" });
 
 	tl.set(".frame1", { opacity: 1 });
-	// return
+
 	tl.add(ypy);
 
 	tl.add("t1", "+=.2");
@@ -205,10 +205,7 @@ var _commonJsCommonJs = require('../../_common/js/common.js');
 var ypy = new TimelineMax();
 ypy.from([".ypy_1", ".ypy_2", ".ypy_3"], { duration: .3, y: "-=200", stagger: .13 });
 
-var device = new TimelineMax();
-device.to(".device", { duration: .3, x: 216, y: 109, scale: .45 }, "t2");
-
-(0, _commonJsCommonJs.init)({ ypy: ypy, device: device });
+(0, _commonJsCommonJs.init)({ ypy: ypy });
 
 },{"../../_common/js/common.js":1}]},{},[5])
 

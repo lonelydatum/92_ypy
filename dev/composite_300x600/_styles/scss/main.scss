@@ -1,13 +1,2 @@
 @import '../../../_common/styles/b300x600.scss';
-
-
-
-
-.device{
-	@include pos-scale(204, 111, .5);
-	// @include pos-scale(216, 109, .45);
-}
-
-.device{
-	filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
-}
+@import '../../../_common/styles/composite.scss';

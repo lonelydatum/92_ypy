@@ -93,7 +93,7 @@ function init(_ref) {
 	TweenLite.to(".phone", { duration: .8, opacity: .6, yoyo: true, repeat: 11, repeatDelay: 0, ease: "back.out" });
 
 	tl.set(".frame1", { opacity: 1 });
-	// return
+
 	tl.add(ypy);
 
 	tl.add("t1", "+=.2");
