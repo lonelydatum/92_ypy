@@ -1,21 +1,12 @@
 @import './common.scss';
+@import './ypy.scss';
 
 #banner{
  width: 728px;
  height: 90px; 
 }
 
-
-
-#olg{
-	
-	width: 117px;
-	height: 69px;
-	@include pos(-2, 26);
-	
-}
-
-
+ 
 
 
 #legalBtn{	
@@ -29,10 +20,21 @@
 	padding: 0;
 	padding-left:5px;
 }
+ 
 
-.ypy-all{
-	// opacity: ;
-	@include pos-scale(230, 20, 1.03);
+
+.logo{	
+	
+	width: 104px;	
 	
 }
+
+
+
+svg#fire{
+	@include pos-scale(68, -21, 0);
+	width: 19px;	
+	
+}
+
 

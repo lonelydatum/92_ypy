@@ -1,4 +1,5 @@
 @import './common.scss';
+@import './ypy.scss';
 
 #banner{
  width: 320px;
@@ -7,14 +8,7 @@
 
 
 
-#olg{
-	// border: 1px solid red;
-	width: 51px;
-	height: 47px;
-	@include pos(0, 15);
-	// opacity: .5 !important;
-}
-
+ 
 
 .legal{
 	// display: none;
@@ -29,12 +23,6 @@
 }
 
 
-.ypy-all{
-	// opacity: ;
-	@include pos-scale(127, 4, 1);
-	
-}
-
 #legalContent{
 	font-size: 8px;
 	line-height: 9px;
@@ -42,4 +30,19 @@
 	br{
 		display: none;
 	}
+}
+
+
+svg#fire{
+	@include pos-scale(34, -13, 0);
+	width: 12px;	
+	
+}
+
+
+
+.logo{	
+	
+	width: 54px;	
+	
 }

@@ -125,6 +125,8 @@ function init(_ref) {
 exports.init = init;
 exports.olg = _proline.olg;
 exports.bannerSize = bannerSize;
+exports.logoGO = logoGO;
+exports.read = read;
 
 },{"./helpers/helpers.js":2,"./proline":3,"./ypy_fx.js":4}],2:[function(require,module,exports){
 "use strict";

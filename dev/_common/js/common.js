@@ -132,4 +132,4 @@ function init({ypy, device}){
 
  
 
-export { init, olg, bannerSize }
+export { init, olg, bannerSize, logoGO, read }
