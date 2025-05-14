@@ -205,41 +205,6 @@ canvas, .text, .frame, .outline, img {
   visibility: hidden;
 }
 
-#banner {
-  width: 300px;
-  height: 250px;
-}
-
-#legalBtn {
-  -webkit-transform: translate(240px, 0px);
-  -ms-transform: translate(240px, 0px);
-  transform: translate(240px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-  width: 60px;
-}
-
-.hero_on {
-  opacity: 0;
-}
-
-.logo {
-  -webkit-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-  width: 82px;
-  bottom: -3px;
-  left: 0;
-}
-
 svg#fire {
   -webkit-transform: translate(54px, -17px) scale(0, 0);
   -ms-transform: translate(54px, -17px) scale(0, 0);
@@ -252,6 +217,10 @@ svg#fire {
   width: 17px;
   bottom: -3px;
   left: 0;
+}
+
+.hero_on {
+  opacity: 0;
 }
 
 #leaf {
@@ -272,6 +241,51 @@ svg {
   overflow: visible;
 }
 
+.logo {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  width: 82px;
+  bottom: -3px;
+  left: 0;
+}
+
+#banner {
+  width: 300px;
+  height: 250px;
+}
+
+#legalBtn {
+  -webkit-transform: translate(240px, 0px);
+  -ms-transform: translate(240px, 0px);
+  transform: translate(240px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  width: 60px;
+}
+
+.logo {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  width: 82px;
+  bottom: -3px;
+  left: 0;
+}
+
 .device {
   -webkit-transform: translate(204px, 111px) scale(0.5, 0.5);
   -ms-transform: translate(204px, 111px) scale(0.5, 0.5);
@@ -286,6 +300,11 @@ svg {
 .device {
   -webkit-filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
   filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
+}
+
+.phone {
+  -webkit-filter: drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #bfff00);
+  filter: drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #bfff00);
 }
 
 /*# sourceMappingURL=main.css.map */

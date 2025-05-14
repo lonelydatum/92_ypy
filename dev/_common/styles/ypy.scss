@@ -1,49 +1,39 @@
 
-.ypy-all{
-	// opacity: ;
-	// @include pos(74, 185);
-	div{
-		overflow: hidden;
-		width: 30px;
-		height:19px;
-		// background-color: blue;
-		position: absolute;
-	}
+svg#fire{
+	@include pos-scale(54, -17, 0);
+	width: 17px;	
+	bottom:-3px;
+	left:0;	
 }
-.ypy_all_1{
+
+
+.hero_on{
+	opacity: 0;
+}
+
+#leaf{
+	// @include pos-scale(0, 10, 1);
+	opacity: 0;
+}
+
+#heart{
+	// @include pos-scale(0, -10, 1);
+	opacity: 0;
+}
+
+#bg, #logo_olg{
+	transform-origin: 0% 100%;
+}
+
+svg{
+	overflow: visible;
+}
+
+
+.logo{	
 	@include pos(0, 0);
+	width: 82px;	
+	bottom:-3px;
+	left:0;
 }
 
-.ypy_all_2{
-	@include pos(11, 0);	
-}
-
-.ypy_all_3{
-	@include pos(25, 0);	
-}
-
-.ypy_all_4{
-	@include pos(43, 0);	
-}
-
-.ypy_all_5{
-	@include pos(58, 0);	
-}
-
-.ypy_all_6{
-	@include pos(69, 0);	
-}
-
-.ypy_all_7{
-	@include pos(85, 0);	
-}
-
-.ypy_all_8{
-	@include pos(102, 0);	
-}
-.ypy_all_9{
-	@include pos(113, 0);	
-}
-.ypy_all_10{
-	@include pos(128, 0);	
-}

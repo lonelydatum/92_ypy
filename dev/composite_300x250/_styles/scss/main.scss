@@ -11,3 +11,11 @@
 .device{
 	filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
 }
+
+.phone{
+	filter: drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #bfff00);
+}
+
+.hero_off, .hero_on{
+	// display: none;
+}

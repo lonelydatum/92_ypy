@@ -1,19 +1,12 @@
 @import './common.scss';
+@import './ypy.scss';
 
 
 #banner{
  width: 300px;
  height: 600px;
 }
-
-#olg{
-	width: 87px;
-	height: 49px;
-	@include pos(0, 555);
-	// opacity: .5 !important;
-	
-}
-
+ 
 
 
 
@@ -23,13 +16,9 @@
 	// opacity: 1;
 }
 
+ 
 
-
-.ypy-all{
-
-	
-	@include pos-scale(20, 365, 1.74);
-	img{
-		@include pos-scale(0, 0, .25);
-	}
+.logo{		
+	width: 82px;		
 }
+
