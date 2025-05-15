@@ -205,10 +205,10 @@ exports.ypyScroll = ypyScroll;
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
-var ypy = new TimelineMax();
-ypy.from([".ypy_1", ".ypy_2", ".ypy_3"], { duration: .3, y: "-=200", stagger: .13 });
+var tl = new TimelineMax();
+tl.from([".ypy_1", ".ypy_2", ".ypy_3"], { duration: .3, opacity: 0, stagger: .3 });
 
-(0, _commonJsCommonJs.init)({ ypy: ypy });
+(0, _commonJsCommonJs.init)({ ypy: tl });
 
 },{"../../_common/js/common.js":1}]},{},[5])
 
