@@ -75,7 +75,7 @@ function init(_ref) {
 
 	tl.add(ypy);
 	tl.add("t1", "+=.2");
-	tl.from([".t1"], { duration: .3, y: "+=30", opacity: 0 }, "t1");
+	tl.from([".t1"], { duration: .3, opacity: 0 }, "t1");
 	tl.from([".device"], { duration: .5, opacity: 0 }, "t1");
 	tl.to(".t1", { duration: .3, opacity: 0 }, "+=" + read.t1);
 

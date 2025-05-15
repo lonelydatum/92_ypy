@@ -55,16 +55,13 @@ function init({ypy, device}, logoAnimateStart=false){
 		}
 	}})
 	
-
 	TweenLite.to(".hero_on", {duration:2, opacity:1, yoyo:true, repeat:0, repeatDelay:0, ease:"back.out"})
 	TweenLite.to(".phone", {duration:.8, opacity:.6, yoyo:true, repeat:11, repeatDelay:0, ease:"back.out"})
 	tl.set(".frame1", {opacity:1})	 
-
-	
  
 	tl.add(ypy)
 	tl.add("t1", "+=.2")
-	tl.from([".t1"], {duration:.3, y:"+=30", opacity:0}, "t1")
+	tl.from([".t1"], {duration:.3, opacity:0}, "t1")
 	tl.from([".device"], {duration:.5, opacity:0}, "t1")
 	tl.to(".t1", {duration:.3, opacity:0}, `+=${read.t1}`)
  

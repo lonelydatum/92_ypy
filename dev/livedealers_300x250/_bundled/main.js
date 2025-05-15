@@ -75,7 +75,7 @@ function init(_ref) {
 
 	tl.add(ypy);
 	tl.add("t1", "+=.2");
-	tl.from([".t1"], { duration: .3, y: "+=30", opacity: 0 }, "t1");
+	tl.from([".t1"], { duration: .3, opacity: 0 }, "t1");
 	tl.from([".device"], { duration: .5, opacity: 0 }, "t1");
 	tl.to(".t1", { duration: .3, opacity: 0 }, "+=" + read.t1);
 
@@ -175,12 +175,12 @@ exports.initYPY = initYPY;
 exports.ypyScroll = ypyScroll;
 
 },{}],5:[function(require,module,exports){
-"use strict";
+'use strict';
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
 var tl = new TimelineMax();
-tl.from([".ypy_1", ".ypy_2", ".ypy_3"], { duration: .3, opacity: 0, stagger: .3 });
+// tl.from([".ypy_1", ".ypy_2", ".ypy_3"], {duration:.3, opacity:0, stagger:.3})
 
 (0, _commonJsCommonJs.init)({ ypy: tl });
 
