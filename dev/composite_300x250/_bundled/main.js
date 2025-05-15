@@ -81,6 +81,7 @@ function logoGO() {
 function init(_ref) {
 	var ypy = _ref.ypy;
 	var device = _ref.device;
+	var logoAnimateStart = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
 
 	var tl = new TimelineMax({ onComplete: function onComplete() {
 			if (document.getElementById("legalBtn")) {
@@ -210,7 +211,7 @@ ypy.from([".ypy_1", ".ypy_2", ".ypy_3"], { duration: .3, y: "-=200", stagger: .1
 var device = new TimelineMax();
 device.to(".device", { duration: .3, x: 216, y: 109, scale: .45 }, "t2");
 
-(0, _commonJsCommonJs.init)({ ypy: ypy, device: device });
+(0, _commonJsCommonJs.init)({ ypy: ypy, device: device }, true);
 
 },{"../../_common/js/common.js":1}]},{},[5])
 

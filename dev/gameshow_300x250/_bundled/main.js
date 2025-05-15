@@ -81,6 +81,7 @@ function logoGO() {
 function init(_ref) {
 	var ypy = _ref.ypy;
 	var device = _ref.device;
+	var logoAnimateStart = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
 
 	var tl = new TimelineMax({ onComplete: function onComplete() {
 			if (document.getElementById("legalBtn")) {

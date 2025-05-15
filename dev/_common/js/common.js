@@ -78,7 +78,7 @@ function logoGO(){
 
  
 
-function init({ypy, device}){	
+function init({ypy, device}, logoAnimateStart=false){	
 	const tl = new TimelineMax({onComplete:()=>{
 		if(document.getElementById("legalBtn")){			
 			TweenLite.set("#legalBtn", {display:"block"})
