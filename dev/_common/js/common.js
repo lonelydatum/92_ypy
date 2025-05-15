@@ -8,50 +8,24 @@ gsap.defaults({
   ease: "power3.out"
 });
 
-const READ_COMPOSITE = {
-	t1: 2,
-	t2: 3
-}
+const READ_COMPOSITE = { t1: 1.6, t2: 3 }
+const READ_LIVEDEALERS = { t1: 1.6, t2: 3 }
+const READ_GAMESHOW = { t1: 1.6, t2: 3.3 }
 
 
-const READ_LIVEDEALERS = {
-	t1: 2,
-	t2: 3
-}
-
-
-const READ_GAMESHOW = {
-	t1: 2,
-	t2: 3.3
-}
-
-
-const READ_ALL = {
-	composite: READ_COMPOSITE,
-	gameshow: READ_GAMESHOW,
-	livedealers:READ_LIVEDEALERS
-}
+const READ_ALL = { composite: READ_COMPOSITE, gameshow: READ_GAMESHOW, livedealers:READ_LIVEDEALERS }
 
 const read = READ_ALL[universalBanner.name]
-console.log(read)
-
-
 const {w, h} = bannerSize
 
 function logoGO(){
 	const tl = new TimelineMax()
-
 	tl.set(["#heart", "#leaf", "#number"], {opacity:0})
 	tl.set(["#fire", `#bg`, `#logo_olg`], {scale:0})
-
 
 	tl.to([`#bg`, `#logo_olg`], {duration:.7, stagger:.1, scale:1, ease:"back.out"})
 	
 	tl.to(`#number`, {duration:.3,  opacity:1}, "-=.25")
-
-	
-	
-
 	const PAUSE = .25
 
 	tl.set(`#zero`, { opacity:1})
@@ -71,12 +45,8 @@ function logoGO(){
 	tl.add("zero", `+=${PAUSE}`)
 	tl.to(`#leaf`, {duration:.1, opacity:0}, "zero")
 	tl.to(`#zero`, {duration:.1, opacity:1}, "zero")
-
-
 	return tl
 }
-
- 
 
 function init({ypy, device}, logoAnimateStart=false){	
 	const tl = new TimelineMax({onComplete:()=>{
@@ -85,41 +55,28 @@ function init({ypy, device}, logoAnimateStart=false){
 		}
 	}})
 	
+
 	TweenLite.to(".hero_on", {duration:2, opacity:1, yoyo:true, repeat:0, repeatDelay:0, ease:"back.out"})
-
 	TweenLite.to(".phone", {duration:.8, opacity:.6, yoyo:true, repeat:11, repeatDelay:0, ease:"back.out"})
-
 	tl.set(".frame1", {opacity:1})	 
 
 	
-	
-
-	tl.add(ypy)	
-
+ 
+	tl.add(ypy)
 	tl.add("t1", "+=.2")
 	tl.from([".t1"], {duration:.3, y:"+=30", opacity:0}, "t1")
 	tl.from([".device"], {duration:.5, opacity:0}, "t1")
 	tl.to(".t1", {duration:.3, opacity:0}, `+=${read.t1}`)
-
-	
-
-
+ 
 	tl.add("t2")
 	if(device){
 		tl.add(device)	
 	}
-	
-	
+		
 	tl.from(".t2", {duration:.3, opacity:0}, "t2")
 	tl.to(".t2", {duration:.3, opacity:0}, `+=${read.t2}`)
-	
-
 	tl.to([  ".frame1"], {duration:.3, opacity:0} )
-
-
-	
 	tl.set(".frame2", {opacity:1}, "+=.3")
-
 	tl.from(".end_device", {duration:.3, opacity:0})
 	tl.from(".end_url", {duration:.3, opacity:0}, "+=.3")
 	tl.from(".end_ypy", {duration:.3, opacity:0}, "+=.3")

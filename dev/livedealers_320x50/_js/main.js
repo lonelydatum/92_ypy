@@ -1,6 +1,6 @@
 import {logoGO, read} from '../../_common/js/common.js'
 
-import {bannerSize, init} from '../../_common/js/common.js'
+
 
 
 const tl = new TimelineMax()

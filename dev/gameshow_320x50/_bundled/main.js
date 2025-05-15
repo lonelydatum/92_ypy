@@ -18,43 +18,24 @@ gsap.defaults({
 	ease: "power3.out"
 });
 
-var READ_COMPOSITE = {
-	t1: 2,
-	t2: 3
-};
+var READ_COMPOSITE = { t1: 1.6, t2: 3 };
+var READ_LIVEDEALERS = { t1: 1.6, t2: 3 };
+var READ_GAMESHOW = { t1: 1.6, t2: 3.3 };
 
-var READ_LIVEDEALERS = {
-	t1: 2,
-	t2: 3
-};
-
-var READ_GAMESHOW = {
-	t1: 2,
-	t2: 3.3
-};
-
-var READ_ALL = {
-	composite: READ_COMPOSITE,
-	gameshow: READ_GAMESHOW,
-	livedealers: READ_LIVEDEALERS
-};
+var READ_ALL = { composite: READ_COMPOSITE, gameshow: READ_GAMESHOW, livedealers: READ_LIVEDEALERS };
 
 var read = READ_ALL[universalBanner.name];
-console.log(read);
-
 var w = bannerSize.w;
 var h = bannerSize.h;
 
 function logoGO() {
 	var tl = new TimelineMax();
-
 	tl.set(["#heart", "#leaf", "#number"], { opacity: 0 });
 	tl.set(["#fire", "#bg", "#logo_olg"], { scale: 0 });
 
 	tl.to(["#bg", "#logo_olg"], { duration: .7, stagger: .1, scale: 1, ease: "back.out" });
 
 	tl.to("#number", { duration: .3, opacity: 1 }, "-=.25");
-
 	var PAUSE = .25;
 
 	tl.set("#zero", { opacity: 1 });
@@ -74,7 +55,6 @@ function logoGO() {
 	tl.add("zero", "+=" + PAUSE);
 	tl.to("#leaf", { duration: .1, opacity: 0 }, "zero");
 	tl.to("#zero", { duration: .1, opacity: 1 }, "zero");
-
 	return tl;
 }
 
@@ -90,13 +70,10 @@ function init(_ref) {
 		} });
 
 	TweenLite.to(".hero_on", { duration: 2, opacity: 1, yoyo: true, repeat: 0, repeatDelay: 0, ease: "back.out" });
-
 	TweenLite.to(".phone", { duration: .8, opacity: .6, yoyo: true, repeat: 11, repeatDelay: 0, ease: "back.out" });
-
 	tl.set(".frame1", { opacity: 1 });
 
 	tl.add(ypy);
-
 	tl.add("t1", "+=.2");
 	tl.from([".t1"], { duration: .3, y: "+=30", opacity: 0 }, "t1");
 	tl.from([".device"], { duration: .5, opacity: 0 }, "t1");
@@ -109,11 +86,8 @@ function init(_ref) {
 
 	tl.from(".t2", { duration: .3, opacity: 0 }, "t2");
 	tl.to(".t2", { duration: .3, opacity: 0 }, "+=" + read.t2);
-
 	tl.to([".frame1"], { duration: .3, opacity: 0 });
-
 	tl.set(".frame2", { opacity: 1 }, "+=.3");
-
 	tl.from(".end_device", { duration: .3, opacity: 0 });
 	tl.from(".end_url", { duration: .3, opacity: 0 }, "+=.3");
 	tl.from(".end_ypy", { duration: .3, opacity: 0 }, "+=.3");
