@@ -73,7 +73,7 @@ function init({ypy, device}, logoAnimateStart=false){
 	tl.from(".t2", {duration:.3, opacity:0}, "t2")
 	tl.to(".t2", {duration:.3, opacity:0}, `+=${read.t2}`)
 	tl.to([  ".frame1"], {duration:.3, opacity:0} )
-	tl.set(".frame2", {opacity:1}, "+=.3")
+	tl.set(".frame2", {opacity:1}, "+=.4")
 	tl.from(".end_device", {duration:.3, opacity:0})
 	tl.from(".end_url", {duration:.3, opacity:0}, "+=.3")
 	tl.from(".end_ypy", {duration:.3, opacity:0}, "+=.3")
