@@ -46,3 +46,13 @@ svg#fire{
 	width: 54px;	
 	
 }
+
+
+
+#svg_move,
+#svg_idle {
+  @include pos(-5, 14);
+}
+#olg_main {
+  width: 55px;
+}

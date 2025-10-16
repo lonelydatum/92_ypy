@@ -5,6 +5,14 @@
 
 
 .device{
-	@include pos-scale(204, 111, .5);
+	// @include pos-scale(204, 111, .5);
 	// @include pos-scale(216, 109, .45);
+}
+
+#svg_move,
+#svg_idle {
+  @include pos(-10, 201);
+}
+#olg_main {
+  width: 74px;
 }

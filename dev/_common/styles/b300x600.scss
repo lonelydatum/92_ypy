@@ -22,3 +22,10 @@
 	width: 82px;		
 }
 
+#svg_move,
+#svg_idle {
+  @include pos(-11, 533);
+}
+#olg_main {
+  width: 106px;
+}

@@ -37,4 +37,26 @@ svg#fire{
 	
 }
 
+#olg_bg{
+	
+	// transform-origin: 0% 100% !important;
+	// transform: translate(0px, 0px) scale(1);
+}
 
+#svg_move, #svg_idle{
+	@include pos(-11, 24);
+}
+#olg_main{		
+	width: 102px;	
+}
+
+
+
+#svg_idle #olg_bg, #svg_idle .con{
+	transform: translate(0px, 40px) scale(1);
+	// transform-origin: 0% 100% !important;
+}
+
+#svg_move{
+	opacity:0;
+}

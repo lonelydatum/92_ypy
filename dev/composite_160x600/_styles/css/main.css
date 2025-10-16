@@ -310,20 +310,36 @@ svg {
   left: 0;
 }
 
+#svg_move,
+#svg_idle {
+  -webkit-transform: translate(-9px, 542px);
+  -ms-transform: translate(-9px, 542px);
+  transform: translate(-9px, 542px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+#olg_main {
+  width: 89px;
+}
+
 .device {
-  -webkit-filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
-  filter: drop-shadow(0px 0px 20px #bfff00) drop-shadow(0px 0px 20px #bfff00);
+  -webkit-filter: drop-shadow(0px 0px 20px #ffe600) drop-shadow(0px 0px 20px #ffe600);
+  filter: drop-shadow(0px 0px 20px #ffe600) drop-shadow(0px 0px 20px #ffe600);
 }
 
 .phone {
-  -webkit-filter: drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #bfff00);
-  filter: drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #bfff00);
+  -webkit-filter: drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #ffe600);
+  filter: drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #FFFFFF) drop-shadow(0px -6px 10px #ffe600);
   opacity: 0;
 }
 
 .end_device {
-  -webkit-filter: drop-shadow(0px 0px 20px #ffffff) drop-shadow(0px 0px 20px #bfff00);
-  filter: drop-shadow(0px 0px 20px #ffffff) drop-shadow(0px 0px 20px #bfff00);
+  -webkit-filter: drop-shadow(0px 0px 20px #ffffff) drop-shadow(0px 0px 20px #ffe600);
+  filter: drop-shadow(0px 0px 20px #ffffff) drop-shadow(0px 0px 20px #ffe600);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -26,7 +26,7 @@ function init({ypy, device}){
 
 	tl.add("t1", "+=.2")
 	tl.from([".t1"], {duration:.3, y:"+=30", opacity:0}, "t1")
-	tl.from([".device"], {duration:.5, opacity:0}, "t1")
+	
 	tl.to(".t1", {duration:.3, opacity:0}, `+=${read.t1}`)
 
 	
@@ -46,7 +46,7 @@ function init({ypy, device}){
 	
 	tl.set(".frame2", {opacity:1}, "+=.3")
 
-	
+	tl.from([".device"], {duration:.5, opacity:0})
 	tl.from(".end_url", {duration:.3, opacity:0}, "+=.3")
 	tl.from(".end_ypy", {duration:.3, opacity:0}, "+=.3")
 	tl.from(".end_cta", {duration:.3, opacity:0, y:"+=50", opacity:0}, "+=.3")

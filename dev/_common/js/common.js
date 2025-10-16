@@ -1,4 +1,4 @@
-import {olg} from "./proline"
+import {olg} from "./olg_confetti.js"
 import {origin} from "./helpers/helpers.js"
 import {initYPY, ypyScroll} from './ypy_fx.js'
 const banner = document.getElementById('banner')
@@ -17,36 +17,7 @@ const READ_ALL = { composite: READ_COMPOSITE, gameshow: READ_GAMESHOW, livedeale
 
 const read = READ_ALL[universalBanner.name]
 const {w, h} = bannerSize
-
-function logoGO(){
-	const tl = new TimelineMax()
-	tl.set(["#heart", "#leaf", "#number"], {opacity:0})
-	tl.set(["#fire", `#bg`, `#logo_olg`], {scale:0})
-
-	tl.to([`#bg`, `#logo_olg`], {duration:.7, stagger:.1, scale:1, ease:"back.out"})
-	
-	tl.to(`#number`, {duration:.3,  opacity:1}, "-=.25")
-	const PAUSE = .25
-
-	tl.set(`#zero`, { opacity:1})
-
-	tl.add("heart", `+=${PAUSE}`)
-	tl.to(`#zero`,  {duration:.1, opacity:0}, "heart")
-	tl.to(`#heart`,  {duration:.1, opacity:1}, "heart")
-
-	tl.add("fire", `+=${PAUSE}`)
-	tl.to(`#heart`,   {duration:.1, opacity:0}, "fire")
-	tl.to(`#fire`,  {duration:.5, scale:1, ease:"back.out"}, "fire")
-
-	tl.add("leaf", `+=${PAUSE}`)
-	tl.to(`#fire`, {duration:.1, scale:0}, "leaf")
-	tl.to(`#leaf`, {duration:.1, opacity:1}, "leaf")
-
-	tl.add("zero", `+=${PAUSE}`)
-	tl.to(`#leaf`, {duration:.1, opacity:0}, "zero")
-	tl.to(`#zero`, {duration:.1, opacity:1}, "zero")
-	return tl
-}
+ 
 
 function init({ypy, device}, logoAnimateStart=false){	
 	const tl = new TimelineMax({onComplete:()=>{
@@ -57,6 +28,9 @@ function init({ypy, device}, logoAnimateStart=false){
 	
 	TweenLite.to(".hero_on", {duration:2, opacity:1, yoyo:true, repeat:0, repeatDelay:0, ease:"back.out"})
 	TweenLite.to(".phone", {duration:.8, opacity:.6, yoyo:true, repeat:11, repeatDelay:0, ease:"back.out"})
+	tl.set(".frame0", {opacity:1})	 
+	tl.from([".ypy_1_", ".ypy_2_", ".ypy_3_"], {duration:.3, opacity:0,  y:"-=200", stagger:.13})
+	tl.to(".frame0", {duration:.3, opacity:0}, "+=1")
 	tl.set(".frame1", {opacity:1})	 
  
 	tl.add(ypy)
@@ -79,11 +53,11 @@ function init({ypy, device}, logoAnimateStart=false){
 	tl.from(".end_ypy", {duration:.3, opacity:0}, "+=.3")
 	tl.from(".end_cta", {duration:.3, opacity:0, y:"+=50", opacity:0}, "+=.3")
 
-	tl.add(logoGO())
+	tl.add(olg())
 	return tl
 }
 
 
  
 
-export { init, olg, bannerSize, logoGO, read }
+export { init, olg, bannerSize, read }

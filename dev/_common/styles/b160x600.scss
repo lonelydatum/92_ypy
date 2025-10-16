@@ -40,3 +40,12 @@
 	left:0;
 }
 
+
+
+#svg_move,
+#svg_idle {
+  @include pos(-9, 542);
+}
+#olg_main {
+  width: 89px;
+}
